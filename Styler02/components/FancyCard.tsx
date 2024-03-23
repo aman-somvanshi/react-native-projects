@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   card: {
-    width: 390,
+    width: 370,
     // height:560,
     borderRadius: 8,
     marginVertical: 12,
@@ -79,6 +79,6 @@ const styles = StyleSheet.create({
   },
   cardFooter: {
     color: '#000000',
-    textAlign:'right'
+    textAlign:'right',
   },
 });
