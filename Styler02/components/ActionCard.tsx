@@ -44,35 +44,39 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 370,
-    // height:560,
-    borderRadius: 10,
+    height:430,
+    borderRadius: 6,
     marginVertical: 12,
     marginHorizontal: 10,
     marginBottom:20
   },
   elevatedCard: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#EAF0F1',
     elevation: 4,
     shadowOffset: {
       width: 1,
       height: 1,
     },
+    shadowColor:'#333',
+    shadowOpacity:0.4
   },
   headingContainer: {
-    
+    height:40,
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
   },
   headerText: {
     fontSize:16,
-    fontWeight:'bold',
+    fontWeight:'600',
     color:'black',
-    paddingHorizontal: 6
   },
   cardImage: {
     height: 250,
     marginBottom: 8,
     // borderRadius:5,
-    borderTopLeftRadius: 8,
-    borderTopRightRadius: 8,
+    // borderTopLeftRadius: 8,
+    // borderTopRightRadius: 8,
   },
   bodyContainer:{
     flex:1,
@@ -82,29 +86,28 @@ const styles = StyleSheet.create({
   },
   footerContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    paddingVertical: 8,
+    justifyContent: 'space-evenly',
+    padding: 1,
+    flexDirection:'row',
   },
   button1: {
     backgroundColor: '#30336B',
     paddingHorizontal: 16,
     paddingVertical: 6,
     borderRadius: 4,
+    elevation:8,
   },
   button2: {
     backgroundColor: '#333945',
     paddingHorizontal: 16,
     paddingVertical: 6,
     borderRadius: 4,
-    margin:10
+    margin:10,
+    elevation:8
   },
   buttonText: {
     color: 'white',
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 16,
   },
   
