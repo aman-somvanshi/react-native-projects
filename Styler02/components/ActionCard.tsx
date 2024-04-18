@@ -21,7 +21,7 @@ export default function ActionCard() {
           style={styles.cardImage}
         />
         <View style={styles.bodyContainer}>
-            <Text numberOfLines={4}>The Haunting of Hill House is a show unlike any other. With its thrilling and psychological take on the Crain family over the course of several years, and its exquisite approach to detail, the storyline of the show itself really surpasses viewers' initial expectations.</Text>
+            <Text numberOfLines={4} style={styles.bodyText}>The Haunting of Hill House is a show unlike any other. With its thrilling and psychological take on the Crain family over the course of several years, and its exquisite approach to detail, the storyline of the show itself really surpasses viewers' initial expectations.</Text>
         </View>
         <View style={styles.footerContainer}>
             <TouchableOpacity style={styles.button1} onPress={()=>openWebsite('https://wildcatchronicle.org/8523/reviews/the-haunting-of-hill-house-is-a-spooky-must-watch/')}>
@@ -83,6 +83,9 @@ const styles = StyleSheet.create({
     flexGrow:1,
     paddingHorizontal: 12,
     marginBottom:5,
+  },
+  bodyText:{
+    color:'black',
   },
   footerContainer: {
     alignItems: 'center',

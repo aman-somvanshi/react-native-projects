@@ -81,5 +81,6 @@ const styles = StyleSheet.create({
     },
     userStatus:{
         fontSize:12,
+        color:'black'
     },
 })
