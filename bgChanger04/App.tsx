@@ -13,6 +13,7 @@ function App(): React.JSX.Element {
   const [squareColor, setSquareColor] = useState("#000000")
   const [rectangleColor, setRectangleColor] = useState("#000000")
   const [circleColor, setCircleColor] = useState("#000000")
+  const [triangleColor, setTriangleColor] = useState("#000000")
 
   const generateColor = ()=>{
     const hexRange="0123456789ABCDEF"
@@ -20,17 +21,20 @@ function App(): React.JSX.Element {
     let sqColor = "#"
     let rectColor = "#"
     let cColor="#"
+    let triColor="#"
 
     for (let i = 0; i < 6; i++) {
       color += hexRange[Math.floor(Math.random() * 16)] //Math.floor(Math.random() * 16) generates a value between 0 and 16
       sqColor += hexRange[Math.floor(Math.random() * 16)]
       rectColor += hexRange[Math.floor(Math.random() * 16)]
       cColor += hexRange[Math.floor(Math.random() * 16)]
+      triColor += hexRange[Math.floor(Math.random() * 16)]
     }
     setRandomBackground(color)
     setSquareColor(sqColor)
     setRectangleColor(rectColor)
     setCircleColor(cColor)
+    setTriangleColor(triColor)
 
 
   }
@@ -58,6 +62,7 @@ function App(): React.JSX.Element {
 
       <View style={styles.LastTwoPoly}>
         <View style={[styles.circle, {backgroundColor: circleColor}]}></View>
+        <View style={[styles.triangle,{borderBottomColor: triangleColor} ]}></View>
       </View>
     </View>
     </>
@@ -120,6 +125,14 @@ const styles = StyleSheet.create({
     borderRadius:25,
     marginTop: 17,
     marginHorizontal:50
+  },
+  triangle:{
+    borderStyle: 'solid',
+    borderLeftWidth: 50, 
+    borderRightWidth: 50, 
+    borderBottomWidth: 100, 
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
   }
 });
 
