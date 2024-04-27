@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useState, useEffect } from 'react';
 import { setupPlayer, addTrack } from '../musicPlayerServices';
+import MusicPlayer from './screens/MusicPlayer';
 
 function App(): React.JSX.Element {
   const [isPlayerReady, setIsPlayerReady] = useState(false)
@@ -33,14 +34,12 @@ function App(): React.JSX.Element {
       </SafeAreaView>
     )
   }
-  
+
   return (
-    <SafeAreaView >
-      <StatusBar
-        
-      />
-      <Text>Testing seems oka</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <StatusBar barStyle={'light-content'}/>
+      <MusicPlayer/>
+    </View>
   );
 }
 
