@@ -64,7 +64,15 @@ class appwriteService {
 
     async login({email, password}: LoginUserAccount){
         try {
-            return await this.account.createEmailPasswordSession(email,password)
+            // Check if user is already logged in
+            const currentUser = await this.getCurrentUser();
+            if (currentUser) {
+                // User is already logged in, no need to log in again
+                return currentUser;
+            }
+            
+            // User is not logged in, proceed with login
+            return await this.account.createEmailPasswordSession(email,password);
         } catch (error) {
             Snackbar.show({
                 text: String(error),
@@ -73,6 +81,7 @@ class appwriteService {
             console.log("Appwrite service :: loginAccount() ::" + error);  
         }
     }
+    
 
     async getCurrentUser(){
         try {
@@ -82,7 +91,7 @@ class appwriteService {
         }
     }
 
-    async logout(){
+     async logout(){
         try {
             return await this.account.deleteSession('current')
         } catch (error) {
